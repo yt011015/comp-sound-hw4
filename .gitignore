@@ -1,0 +1,41 @@
+# Build artifacts
+Build/
+builds/
+*/build/
+JuceLibraryCode/
+
+# Binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Intermediate build files
+*.o
+*.obj
+*.dSYM/
+*.intermediate/
+
+# IDE/Editor specific
+.vs/
+.vscode/
+*.code-workspace
+.idea/
+*.xcodeproj
+*.xcworkspace
+*.sublime-*
+
+# User-specific files
+*.user
+*.userprefs
+.DS_Store
+Thumbs.db
+
+# Projucer
+*.jucer
+autosave*
+
+# Miscellaneous
+LocalSettings.ini
+*.log
+
