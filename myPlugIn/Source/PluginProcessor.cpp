@@ -162,17 +162,18 @@ void MyPlugInAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
             
             int writeIndex = 0;
 
-            for (int sample = 0; sample < buffer.getNumSamples(); sample += 2)
+            for (int i = 0; i < 2; i += 1)
             {
-                float processedSample = channelData[sample] * gain;
-
-                if (writeIndex < buffer.getNumSamples() - 1)
+                for (int sample = 0; sample < buffer.getNumSamples(); sample += 2)
                 {
-                    tempBufferData[writeIndex++] = processedSample;
-                    tempBufferData[writeIndex++] = processedSample;
+                    float processedSample = channelData[sample] * gain;
+
+                    if (writeIndex < buffer.getNumSamples() - 1)
+                    {
+                        tempBufferData[writeIndex++] = processedSample;
+                    }
                 }
             }
-            
             std::copy(tempBufferData, tempBufferData + buffer.getNumSamples(), channelData);
         }
     }
