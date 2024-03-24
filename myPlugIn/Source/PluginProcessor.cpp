@@ -177,7 +177,6 @@ void MyPlugInAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
             std::copy(tempBufferData, tempBufferData + buffer.getNumSamples(), channelData);
         }
     }
-    
 }
 
 void MyPlugInAudioProcessorEditor::sliderValueChanged (juce::Slider *slider)
